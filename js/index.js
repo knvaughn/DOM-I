@@ -88,7 +88,7 @@ contactInfo[2].textContent = siteContent.contact.email;
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer.copyright;
 
-let homeLink = document.createElement('a');
+const homeLink = document.createElement('a');
 homeLink.textContent = 'Home';
 homeLink.setAttribute('href', '#');
 document.querySelector('nav').prepend(homeLink);
