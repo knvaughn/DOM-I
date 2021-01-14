@@ -87,3 +87,6 @@ contactInfo[2].textContent = siteContent.contact.email;
 
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer.copyright;
+
+const navLinksArr = [...navLinks];
+navLinksArr.map(link => link.style.color = 'green');
