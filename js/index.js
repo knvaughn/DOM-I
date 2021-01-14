@@ -88,5 +88,17 @@ contactInfo[2].textContent = siteContent.contact.email;
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer.copyright;
 
-const navLinksArr = [...navLinks];
+let homeLink = document.createElement('a');
+homeLink.textContent = 'Home';
+homeLink.setAttribute('href', '#');
+document.querySelector('nav').prepend(homeLink);
+
+const contactLink = document.createElement('a');
+contactLink.textContent = 'Contact';
+homeLink.setAttribute('href', '#');
+document.querySelector('nav').appendChild(contactLink);
+
+const newLinks = document.querySelectorAll('nav a');
+newLinks[1].remove();
+const navLinksArr = [...newLinks];
 navLinksArr.map(link => link.style.color = 'green');
