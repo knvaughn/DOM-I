@@ -45,6 +45,11 @@ const navLinks = document.querySelectorAll('nav a');
 for(let i = 0; i < navLinks.length; i++) {
   navLinks[i].textContent = siteContent.nav[`nav-item-${i}`];
 }
+let headingText = siteContent.cta.h1;
+headingText = headingText.split(" ").join("<br> ");
+document.querySelector('h1').innerHTML = headingText;
 
-document.querySelector('h1').innerHTML = "DOM<br> Is<br> Awesome";
-document.querySelector('.cta button').textContent = "Get Started";
+document.querySelector('.cta button').textContent = siteContent.cta.button;
+
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.setAttribute('src', siteContent.cta['img-src'])
