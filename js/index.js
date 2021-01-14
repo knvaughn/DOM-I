@@ -70,3 +70,17 @@ mainContentText[4].textContent = siteContent['main-content']['vision-content'];
 
 const middleImg = document.querySelector('#middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+const contactHeading = document.querySelector('.contact h4');
+contactHeading.textContent = siteContent.contact["contact-h4"];
+
+const contactInfo = document.querySelectorAll('.contact p');
+let address = siteContent.contact.address;
+[addressTop, addressBottom] = [address.split(',')[0], address.split(',')[1]];
+addressTop = addressTop.split(" ");
+let city = addressTop.pop();
+addressTop = addressTop.join(" ");
+address = `${addressTop}<br>${city},${addressBottom}`;
+contactInfo[0].innerHTML = address;
+contactInfo[1].textContent = siteContent.contact.phone;
+contactInfo[2].textContent = siteContent.contact.email;
