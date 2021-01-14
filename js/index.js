@@ -95,7 +95,7 @@ document.querySelector('nav').prepend(homeLink);
 
 const contactLink = document.createElement('a');
 contactLink.textContent = 'Contact';
-homeLink.setAttribute('href', '#');
+contactLink.setAttribute('href', '#');
 document.querySelector('nav').appendChild(contactLink);
 
 const newLinks = document.querySelectorAll('nav a');
